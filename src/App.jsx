@@ -1,17 +1,10 @@
-import routes from './routes.jsx'
-import { useRoutes } from 'react-router-dom'
-
+import routes from "./routes.jsx";
+import { useRoutes } from "react-router-dom";
 
 function App() {
-  const showRoutes = useRoutes(routes)
+  const showRoutes = useRoutes(routes);
 
-  return (
-    <>
-      {
-        showRoutes
-      }
-    </>
-  )
+  return <>{showRoutes}</>;
 }
 
-export default App
+export default App;

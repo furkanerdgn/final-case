@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .intro {
+    transform: rotateX(80deg);
+    transform-origin: 0% 100%;
+  }
+
+  .contDiv {
+    perspective: 200px;
+    transform-style: preserve-3d;
+  }
+}
+
+@layer base {
+  *::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  *::-webkit-scrollbar-track {
+    @apply  bg-gradient-to-b from-yellow-100 to-yellow-500;
+  }
+  *::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: black;
+    border:1px solid white
+  }
+}

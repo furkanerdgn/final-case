@@ -1,9 +1,17 @@
+import Navbar from "../components/Navbar";
+import { Outlet } from "react-router-dom";
+import Footer from "../components/FooterComp";
 
 function Layout() {
-  console.log("Layout");
   return (
-    <div className="text-3xl text-black">Layout</div>
-  )
+    <>
+      <Navbar />
+      <section className="container">
+        <Outlet />
+      </section>
+      <Footer />
+    </>
+  );
 }
 
-export default Layout
+export default Layout;
