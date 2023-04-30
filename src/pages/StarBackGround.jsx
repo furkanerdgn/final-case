@@ -11,7 +11,6 @@ import { StarshipContext } from "../context/ShipsContext";
 import starWars from "../audio/starWars.mp3";
 
 function Background() {
-
   const { setIsPressed } = useContext(StarshipContext);
   setIsPressed(true);
   const [isComplete, setIsComplete] = useState(false);
@@ -19,13 +18,12 @@ function Background() {
   const navigate = useNavigate();
   const [music, setMusic] = useState(true);
 
-
-  useEffect (() => {
+  useEffect(() => {
     setTimeout(() => {
       setMusic(false);
     }, 65000);
 
-    return clearTimeout
+    return clearTimeout;
   }, []);
 
   const random = (min, max) => {
@@ -58,10 +56,10 @@ function Background() {
         <Saber /> <span className="font-semibold">Back</span>
       </button>
       {music && (
-  <audio className="absolute hidden" controls autoPlay>
-    <source src={starWars} type="audio/mpeg" />
-  </audio>
-)}
+        <audio className="absolute hidden" controls autoPlay>
+          <source src={starWars} type="audio/mpeg" />
+        </audio>
+      )}
 
       <div className="min-h-screen relative overflow-hidden -z-20 bg-black">
         {stars?.map((star) => (

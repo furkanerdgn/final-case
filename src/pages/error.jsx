@@ -1,7 +1,4 @@
-
 function Error() {
-
-
   return (
     <div className="bg-indigo-900 relative overflow-hidden h-screen">
       <img
@@ -14,9 +11,7 @@ function Error() {
           <h1 className="font-extrabold text-5xl text-center text-white leading-tight mt-4">
             You are all alone here
           </h1>
-          <p className="font-extrabold text-8xl my-44 text-white ">
-            404
-          </p>
+          <p className="font-extrabold text-8xl my-44 text-white ">404</p>
         </div>
       </div>
     </div>

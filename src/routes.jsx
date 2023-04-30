@@ -17,7 +17,6 @@ const routes = [
         path: "/ships/:id",
         element: <Ship />,
       },
-
     ],
   },
   {
@@ -28,7 +27,6 @@ const routes = [
     path: "*",
     element: <NotFound />,
   },
- 
 ];
 
 export default routes;
