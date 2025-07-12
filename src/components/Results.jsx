@@ -10,7 +10,7 @@ function Results(props) {
     if (img) {
       setImage(img.img);
     }
-  }, []);
+  }, [props.ship.name]);
 
   return (
     <>

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { createContext } from "react";
 
-const StarshipContext = createContext();
+const ShipsContext = createContext();
 
-function ShipsContext({ children }) {
+function ShipsProvider({ children }) {
   const [search, setSearch] = useState("");
   const [isSubmit, setIsSubmit] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
@@ -18,10 +18,10 @@ function ShipsContext({ children }) {
   };
 
   return (
-    <StarshipContext.Provider value={store}>
+    <ShipsContext.Provider value={store}>
       {children}
-    </StarshipContext.Provider>
+    </ShipsContext.Provider>
   );
 }
 
-export { ShipsContext, StarshipContext };
+export { ShipsProvider, ShipsContext };

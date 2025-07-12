@@ -23,12 +23,12 @@ function Index() {
   });
 
   useEffect(() => {
-    ship &&
-      images.filter((img) => {
-        if (img.name === ship.name) {
-          setImage(img.img);
-        }
-      });
+    if (ship) {
+      const img = images.find((img) => img.name === ship.name);
+      if (img) {
+        setImage(img.img);
+      }
+    }
   }, [ship]);
 
   return (

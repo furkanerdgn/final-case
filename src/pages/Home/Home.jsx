@@ -3,14 +3,14 @@ import Results from "../.././components/Results";
 import { v4 as uuidv4 } from "uuid";
 import { useRef } from "react";
 import { useInfiniteQuery } from "react-query";
-import { StarshipContext } from "../.././context/ShipsContext";
+import { ShipsContext } from "../.././context/ShipsContext";
 import { useContext } from "react";
 import { fetchStarships } from "../../lib/Starships";
 import { Link } from "react-router-dom";
 import HomeHead from "../../components/HomeHead";
 
 function Home() {
-  const { search, isSubmit } = useContext(StarshipContext);
+  const { search, isSubmit } = useContext(ShipsContext);
 
   const scrollRef = useRef(null);
 
